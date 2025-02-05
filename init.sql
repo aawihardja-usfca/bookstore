@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS test;
+USE test;
+
+CREATE TABLE IF NOT EXISTS books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    cover TEXT NULL,
+    price INT NOT NULL
+);
