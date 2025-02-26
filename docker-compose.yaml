@@ -27,7 +27,7 @@ services:
       - MYSQL_DATABASE=test
       - MYSQL_INITDB_SKIP_TZINFO=yes
     ports:
-      - "3307:3306"
+      - "3306:3306"
     command: --default-authentication-plugin=mysql_native_password
     networks:
       - app-network
