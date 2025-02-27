@@ -19,7 +19,6 @@ app.get("/", (req,res)=>{
     res.json("Hello World from the backend!!!")
 })
 
-//postman -> get method  http://localhost:8800/books
 app.get("/books", (req,res)=>{
     const query = "SELECT * FROM books"
     db.query(query, (err,data)=>{
@@ -27,16 +26,6 @@ app.get("/books", (req,res)=>{
           return res.json(data)
     })
   })
-
-
-  //postman ---> post method
-  //json body bellow
-  //----------------------------- http://localhost:8800/books
-  //{
-// "title": "title from client",
-// "description": "description from client",
-// "cover": "cover from client"
-// }
 
   app.post("/books", (req,res)=>{
     const query = "INSERT INTO books (`title`, `description`, `price`, `cover`) VALUES (?)"
@@ -84,5 +73,3 @@ app.get("/books", (req,res)=>{
 app.listen(8800, ()=>{
     console.log("Connect to the backend!!!!")
 })
-
-//npm start
