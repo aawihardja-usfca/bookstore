@@ -8,7 +8,7 @@ const db = mysql.createConnection({
     host: process.env.RDS_HOST,
     user: process.env.RDS_USER || "user",
     password: process.env.RDS_PASSWORD || "password",
-    database: process.env.DB_NAME || "db"
+    database: process.env.DB_NAME
 })
 
 app.use(express.json())//return json data using the api server postman
